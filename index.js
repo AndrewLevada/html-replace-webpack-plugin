@@ -16,7 +16,7 @@ function HtmlReplaceWebpackPlugin(options) {
           throw new Error('Invalid `pattern` option provided, it must be a valid regex.')
         }
 
-        htmlPluginData.html = htmlPluginData.html.replace(option.pattern, option.replacement)
+        htmlPluginData.html = htmlPluginData.html.replace(option.pattern, (match, ...group) => option.replacement(match, htmlPluginData.outputName, group))
       } else {
         if (option.pattern instanceof RegExp)
           htmlPluginData.html = htmlPluginData.html.replace(option.pattern, option.replacement)
