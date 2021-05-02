@@ -1,5 +1,5 @@
 {
-  "name": "html-replace-webpack-plugin",
+  "name": "@zipeapps/html-replace-webpack-plugin",
   "version": "2.6.0",
   "description": "A Webpack plugin for replace HTML contents with custom pattern string or regex.",
   "main": "index.js",
